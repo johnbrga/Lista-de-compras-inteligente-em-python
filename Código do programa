@@ -1,42 +1,37 @@
 lista_compras = []
 esc = 0
 
-
 while esc != 4:
     print(' 1. Adicionar item \n 2. Ver Lista \n 3. Remover item \n 4. Sair')
     esc = int(input('Digite o que deseja realizar: '))
-   
+    
     if esc == 1:
         print('Voce escolheu adicionar itens')
         item = input('Digite qual item deseja adicionar: ')
-        lista_compras.append(item) 
+        lista_compras.append(item)
         print(f'"{item}" foi adicionado com sucesso!\n')
 
-    
     elif esc == 2:
         print('--- SUA LISTA DE COMPRAS ---')
         if len(lista_compras) == 0:
             print('Sua lista está vazia!')
         else:
-            for item in lista_compras: 
+            for item in lista_compras:
                 print(f'- {item}')
         print('----------------------------\n')
-
 
     elif esc == 3:
         print('Voce escolheu retirar algum item da lista')
         item_remover = input('Digite o exato nome do item que deseja remover: ')
         
         if item_remover in lista_compras:
-            lista_compras.remove(item_remover) 
+            lista_compras.remove(item_remover)
             print(f'"{item_remover}" foi removido com sucesso!\n')
         else:
             print('Esse item não foi encontrado na lista.\n')
 
-   
     elif esc == 4:
-        print('Saindo do programa')
+        print('Saindo do programa... Até mais!')
         
-    
     else:
         print('Escolha inválida, tente novamente\n')
